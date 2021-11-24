@@ -1,0 +1,13 @@
+<div class="">
+    <img src="{{album.img}}" class="card-img-top img-fluid flag triangle" [alt]="album.artista">
+    <div class="card-body gap-2 d-grid shadow">
+        <h5 class="card-title">{{album.posicion}}. {{album.album}}</h5>
+        <h6>{{album.artista}}</h6>
+        <p class="card-text">{{album.bio | slice:0:100}}...</p>
+        <p class="card-text"><small class="text-muted">{{album.label}} - {{album.ano}}</small></p>
+        <button (click)="verAlbum()" type="button" class="btn btn-outline-dark">
+            See more...
+        </button>
+        <!--<a [routerLink]="['/album', i]" class="btn btn-outline-dark">See more...</a>-->
+    </div>
+</div>
